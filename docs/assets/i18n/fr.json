@@ -1,0 +1,30 @@
+{
+    "EMPLOYEE": {
+        "employee-dashboard": "Tableau de bord des employés",
+        "add-employee": "Ajouter un employé",
+        "more-info": "Plus d'information",
+        "add-employee-form": {
+            "add-employee": "Ajouter un employé",
+            "personal-info": "Renseignements personnels",
+            "first-name": "Prénom",
+            "middle-name": "Deuxième nom",
+            "last-name": "Nom de famille",
+            "nationality": "Nationalité",
+            "marital-status": "État civil",
+            "primary-lang": "Langue principale",
+            "age": "Âge",
+            "date-joined": "Date d'adhésion",
+            "contact-info": "Informations de contact",
+            "email": "Email",
+            "phone-number": "Numéro de téléphone",
+            "address": "Adresse",
+            "employee-information": "Informations sur les employés",
+            "job-title": "Profession",
+            "salary": "Un salaire",
+            "weekly-hours": "Heures hebdomadaires",
+            "days-off": "Jours de congés",
+            "skills": "Compétences",
+            "cancel": "Annuler"
+        }
+    }
+}
