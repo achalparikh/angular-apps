@@ -1,0 +1,36 @@
+.title {
+    margin-top: 15vh;
+    margin-bottom: 3vh;
+    background-color: #fff;
+    padding: 30px;
+    max-height: 70vh;
+    overflow: scroll;
+background: linear-gradient(145deg, #ffffff, #e3e3e3);
+box-shadow:  20px 20px 60px #d6d6d6, 
+             -20px -20px 60px #ffffff;
+}
+
+.menu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+mat-card {
+    margin-top: 2vh;
+}
+
+mat-sidenav-container {
+    height: 100%;
+    margin-top: 5vh;
+}
+
+mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    background-color: coral;
+    width: 200px;
+}

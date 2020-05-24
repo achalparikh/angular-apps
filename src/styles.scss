@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './variables.scss';
+
+body {
+    background: #FCFCFC;
+    // background: radial-gradient(circle, $purple-one 80%, $purple-two 100%, $purple-three 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}

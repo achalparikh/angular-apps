@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>{{ 'EMPLOYEE.employee-dashboard' | translate}}
+    <button class="btn float-right btn-success" (click)="openForm()">{{ 'EMPLOYEE.add-employee' | translate }}</button>
+    <hr />
+  </mat-card-title>
+  <mat-card-content>
+    <div class="employee" *ngFor="let e of allEmployees">
+      <div class="row">
+        <div class="col-sm-12 col-md-10">
+          <p class="h6 name">{{ e.personalInfo.firstName }} {{ e.personalInfo.lastName }}</p>
+        </div>
+        <div class="col-sm-12 col-md-2">
+          <button class="btn btn-block btn-dark">{{ 'EMPLOYEE.more-info' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button class="btn btn-info" style="margin-right: 10px;" (click)="translateLanguage('en')">English</button>
+    <button class="btn btn-info" style="margin-right: 10px;" (click)="translateLanguage('fr')">French</button>
+  </mat-card-actions>
+</mat-card>

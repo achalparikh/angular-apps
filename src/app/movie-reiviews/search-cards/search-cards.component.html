@@ -1,0 +1,84 @@
+<div class="container">
+  <mat-card class="first-card">
+    <mat-card-title>
+      <div class="row">
+        <div class="col-8">
+          <h2 class="h4">Search Movies and Reviews</h2>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-danger float-right" routerLink="/">Back to Dashboard</button>
+        </div>
+      </div>
+      <hr />
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="movieForm">
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Search Movie</mat-label>
+              <input matInput formControlName="search">
+              <mat-error *ngIf="search.invalid && search.errors.required">Please Enter a Movie</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Year</mat-label>
+              <input matInput type="number" formControlName="year">
+            </mat-form-field>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <button class="btn btn-primary" [disabled]="movieForm.pristine || movieForm.invalid" (click)="getInfo()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="results" *ngIf="results?.length > 0">
+    <mat-card-title>
+      Search Results
+      <hr />
+    </mat-card-title>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let item of results">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <ng-template matExpansionPanelContent>
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="h5">Overview</p>
+                <p>{{ item.overview }}</p>
+              </div>
+              <div class="col-sm-12">
+                <p class="h5">Release Date</p>
+                <p>{{ item.release_date }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-3">
+                <p class="h5">Average Rating</p>
+                <p>{{ item.vote_average }}</p>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <p class="h5">Total Votes</p>
+                <p>{{ item.vote_count }}</p>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <p class="h5">Popularity</p>
+                <p>{{ item.popularity }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <button class="btn btn-primary" [routerLink]="['/movies/details', item.id]" routerLinkActive="router-link-active">Details And Reviews</button>
+              </div>
+            </div>
+          </ng-template>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>  
+</div>
+<ngx-spinner></ngx-spinner>

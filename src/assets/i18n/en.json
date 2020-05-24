@@ -1,0 +1,30 @@
+{
+    "EMPLOYEE": {
+        "employee-dashboard": "Employee Dashboard",
+        "add-employee": "Add Employee",
+        "more-info": "More Information",
+        "add-employee-form": {
+            "add-employee": "Add Employee",
+            "personal-info": "Personal Information",
+            "first-name": "First Name",
+            "middle-name": "Middle Name",
+            "last-name": "Last Name",
+            "nationality": "Nationality",
+            "marital-status": "Marital Status",
+            "primary-lang": "Primary Language",
+            "age": "Age",
+            "date-joined": "Date Joined",
+            "contact-info": "Contact Information",
+            "email": "Email",
+            "phone-number": "Phone Number",
+            "address": "address",
+            "employee-information": "Employee Information",
+            "job-title": "Job Title",
+            "salary": "Salary",
+            "weekly-hours": "Weekly Hours",
+            "days-off": "Days Off",
+            "skills": "Skills",
+            "cancel": "Cancel"
+        }
+    }
+}

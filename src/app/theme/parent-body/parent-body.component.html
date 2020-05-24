@@ -1,0 +1,8 @@
+<div [ngClass]="{
+  'white-bg': theme === false,
+  'black-bg': theme === true
+  }">
+  <h1>This is the Parent Text</h1>
+  <h3>{{ theme }}</h3>
+  <app-child-body></app-child-body>
+</div>

@@ -1,0 +1,51 @@
+<div class="row" style="margin-top: 5vh;">
+  <div class="col-xs-12">
+    <a [routerLink]="['/recipies']" routerLinkActive="router-link-active" ><button class="back-btn">&laquo;</button></a>
+  </div>
+</div>
+<div class="row title">
+    <h2>{{ foodItem.name }}</h2>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p class="h5">{{ foodItem.desc }}</p>
+  </div>
+</div>
+
+<div class="col-xs-12">
+  <mat-tab-group mat-align-tabs="left" animationDuration="1000ms">
+    <mat-tab label="First">
+      <div class="shadow card col-xs-12">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{ foodItem.imgLink }}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Second">
+      <div class="card col-xs-12">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{ foodItem.imgLink }}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

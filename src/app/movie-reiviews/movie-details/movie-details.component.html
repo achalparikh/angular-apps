@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-12">
+    <div class="col-xs-12">
+      <a [routerLink]="['/movies/search']" routerLinkActive="router-link-active" ><button class="back-btn">&laquo;</button></a>
+    </div>
+  </div>
+</div>
+<div class="row main-cards">
+  <div class="col-sm-12 col-md-6">
+    <mat-card>
+      <mat-card-title>{{ movie?.title }}<hr/></mat-card-title>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <img src="http://image.tmdb.org/t/p/w185/{{ movie?.poster_path }}" />
+          </div>
+          <div class="col-sm-12 col-md-6 overview">
+            <h4>Overview</h4>
+            <p>{{ movie?.overview }}</p>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-sm-12 col-md-4">
+            <h5>Vote Count</h5>
+            <p>{{ movie?.vote_count }}</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <h5>Vote Average</h5>
+            <p>{{ movie?.vote_average }}</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <h5>Popularity</h5>
+            <p>{{ movie?.popularity }}</p>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-sm-12 col-md-4">
+            <h5>Budget</h5>
+            <p>{{ movie?.budget | currency }}</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <h5>Revenue</h5>
+            <p>{{ movie?.revenue | currency }}</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <mat-card>
+      <mat-card-title>Reviews<span class="float-right">Total: {{ reviews?.results?.length }}</span><hr /></mat-card-title>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-12">
+            <button class="btn btn-success float-right" (click)="writeReview()">Write Review</button>
+          </div>
+          <div class="col-sm-12" *ngFor="let item of reviewResults">
+            <div class="card emboss">
+              <div class="card-body">
+                <p class="h6">{{ item?.author }}</p>
+                <hr />
+                <p>{{ item?.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<ngx-spinner></ngx-spinner>

@@ -1,0 +1,137 @@
+<h2 mat-dialog-title>{{ 'EMPLOYEE.add-employee-form.add-employee' | translate }}</h2>
+<mat-dialog-content>
+    <h5>{{ 'EMPLOYEE.add-employee-form.personal-info' | translate }}<hr /></h5>
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.first-name' | translate }}</mat-label>
+                    <input matInput formControlName="firstName" required>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.middle-name' | translate }}</mat-label>
+                    <input matInput formControlName="middleName">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.last-name' | translate }}</mat-label>
+                    <input matInput formControlName="lastName" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.nationality' | translate }}</mat-label>
+                    <mat-select formControlName="nationality" required>
+                        <mat-option value="United States">United States</mat-option>
+                        <mat-option value="Canada">Canada</mat-option>
+                        <mat-option value="India">India</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.marital-status' | translate }}</mat-label>
+                    <mat-select formControlName="maritalStatus" required>
+                        <mat-option value="Married">Married</mat-option>
+                        <mat-option value="Single">Single</mat-option>
+                        <mat-option value="Committed">Committed</mat-option>
+                        <mat-option value="N/A">N/A</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.primary-lang' | translate }}</mat-label>
+                    <input matInput formControlName="primaryLanguage" required>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.age' | translate }}</mat-label>
+                    <input matInput formControlName="age" required type="number">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <mat-form-field>
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.date-joined' | translate }}</mat-label>
+                    <input matInput [min]="today" [matDatepicker]="myDatepicker" [matDatepickerFilter]="myFilter" formControlName="dateJoined" appearance="outline" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #myDatepicker touchUi disabled="false"></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <h5>{{ 'EMPLOYEE.add-employee-form.contact-info' | translate }}<hr /></h5>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.email' | translate }}</mat-label>
+                    <input matInput formControlName="email" required>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.phone-number' | translate }}</mat-label>
+                    <input matInput formControlName="phoneNumber" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.address' | translate }}</mat-label>
+                    <textarea rows="1" matInput formControlName="address" required></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <h5>{{ 'EMPLOYEE.add-employee-form.employee-information' | translate }}<hr /></h5>
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.job-title' | translate }}</mat-label>
+                    <input matInput formControlName="jobTitle" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.salary' | translate }}</mat-label>
+                    <input matInput formControlName="salary" type="number" required>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.weekly-hours' | translate }}</mat-label>
+                    <input matInput formControlName="weeklyHours" type="number" required>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.days-off' | translate }}</mat-label>
+                    <input matInput formControlName="daysOff" type="number" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ 'EMPLOYEE.add-employee-form.skills' | translate }}</mat-label>
+                    <textarea rows="4" matInput formControlName="skills" required></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+        <button class="btn btn-success" [disabled]="form.invalid || form.pristine" mat-dialog-close (click)="addEmployee()">{{ 'EMPLOYEE.add-employee-form.add-employee' | translate }}</button>
+        <button class="btn btn-danger" mat-dialog-close>{{ 'EMPLOYEE.add-employee-form.cancel' | translate }}</button>
+</mat-dialog-actions>
